@@ -1,4 +1,4 @@
-package com.azazellj.recyclerview.adapter.html;
+package com.azazellj.recyclerview.adapter.html.app;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
