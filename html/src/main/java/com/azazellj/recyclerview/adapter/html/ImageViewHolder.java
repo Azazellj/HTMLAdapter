@@ -14,6 +14,9 @@ import java.net.URLDecoder;
 public class ImageViewHolder {
     public static String initImageViewHolder(Element element, String baseURL) {
         Elements attr = element.getElementsByTag(HtmlScheme.IMG.getTag());
+
+        if (attr.isEmpty()) return null;
+
         String url = attr.get(0).attributes().get("src");
 
         boolean hasScheme = url.contains(Protocol.HTTP) || url.contains(Protocol.HTTPS);

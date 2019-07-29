@@ -14,8 +14,8 @@ import org.jsoup.select.Elements;
  */
 public class VideoViewHolder {
 
-    public static void initVideoViewHolder(Element element, ImageView imageView, String baseURL) {
-        Elements attr = element.getElementsByTag(HtmlScheme.IFRAME.getTag());
+    public static String initYoutubeViewHolder(Element element, ImageView imageView, String baseURL) {
+        Elements attr = element.getElementsByTag(HtmlScheme.YOUTUBE.getTag());
         String videoURL = attr.get(0).attributes().get("src");
 
         boolean hasScheme = videoURL.contains(Protocol.HTTP) || videoURL.contains(Protocol.HTTPS);
@@ -44,6 +44,7 @@ public class VideoViewHolder {
         }
 
         String youtubePlaceholderPattern = "http://img.youtube.com/vi/%s/0.jpg";
-        String imageURL = String.format(youtubePlaceholderPattern, videoID);
+
+        return String.format(youtubePlaceholderPattern, videoID);
     }
 }

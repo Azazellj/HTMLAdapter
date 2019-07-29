@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.Azazellj'
 
 android {
     compileSdkVersion 28
@@ -13,5 +15,7 @@ android {
 
 dependencies {
     implementation 'org.jsoup:jsoup:1.11.2'
-    implementation "com.android.support:recyclerview-v7:28.0.0"
+    implementation 'com.android.support:support-annotations:28.0.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'

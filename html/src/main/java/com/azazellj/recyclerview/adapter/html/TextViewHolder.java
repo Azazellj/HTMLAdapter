@@ -63,7 +63,7 @@ public class TextViewHolder {
         int flags = strBuilder.getSpanFlags(span);
         ClickableSpan clickable = new ClickableSpan() {
             public void onClick(View view) {
-                listener.onLinkClick(span.getURL());
+                if (listener != null) listener.onLinkClick(span.getURL());
             }
         };
         strBuilder.setSpan(clickable, start, end, flags);

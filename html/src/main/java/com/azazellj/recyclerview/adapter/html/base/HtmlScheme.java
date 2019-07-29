@@ -8,7 +8,7 @@ public enum HtmlScheme {
     UL("ul"),
     OL("ol"),
     IMG("img"),
-    IFRAME("iframe");
+    YOUTUBE("iframe");
 
     private String tag;
 
