@@ -1,4 +1,4 @@
-package com.azazellj.recyclerview.adapter.html.app;
+package com.azazellj.recyclerview.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -85,7 +85,7 @@ public class HtmlAdapter extends RecyclerView.Adapter {
 
 
     private RecyclerView.ViewHolder createTextViewHolder(final LayoutInflater inflater, final ViewGroup parent) {
-        return new RecyclerView.ViewHolder(inflater.inflate(R.layout.item_html_text, parent, false)) {
+        return new RecyclerView.ViewHolder(inflater.inflate(com.azazellj.recyclerview.adapter.R.layout.item_html_text, parent, false)) {
         };
     }
 
